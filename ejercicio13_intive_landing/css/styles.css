@@ -1,0 +1,225 @@
+:root {
+    --color-menu-top: white;
+    --color-section-odd: white;
+    --color-section-even: black;
+    --font-size-menu: 1.2rem;
+    --font-size-icon: 1.5rem;
+    --font-size-title: 3.5rem;
+    --font-size-subtitle: 1.5rem;
+    --font-size-section: 2rem;
+    --font-family-titles: 'Courier New', Courier, monospace;
+    --font-family-p: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+.menu-top {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    z-index: 3;
+}
+.menu-top > label > span {
+    box-sizing: border-box;
+    color: var(--color-menu-top);
+    font-size: var(--font-size-menu);
+        text-decoration: none;
+    padding: 0.5em 1em;
+    font-size: var(--font-size-icon);
+    font-weight: bold;
+    z-index: 3;
+    font-family: var(--font-family-titles);
+}
+input[type='checkbox'] {
+    display: none;
+}
+#navbar {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    margin: 1em 0;
+    z-index: 3;
+}
+nav a {
+    box-sizing: border-box;
+    text-decoration: none;
+    color: var(--color-menu-top);
+    padding: 1em;
+    font-size: var(--font-size-menu);
+    font-weight: bold;
+    font-family: var(--font-family-titles);
+}
+.banner {
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-info {
+    box-sizing: border-box;
+}
+
+.banner div h1{
+    margin: 0;
+    text-align: center;
+    color: var(--color-menu-top);
+    animation-duration: 1s;
+    animation-name: slidein-r;
+    letter-spacing: 0.1em;
+}
+.banner div p {
+    margin: 0;
+    text-align: center;
+    color: var(--color-menu-top);
+    animation-duration: 1.5s;
+    animation-name: slidein-r;
+    font-weight: bold;
+}
+.bg-banner {
+    position: absolute;
+    background-image: url("../img/wallpaperbetter.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: -1;
+}
+.banner-info > h1 {
+    font-family: var(--font-family-titles);
+    font-weight: bold;
+    font-size: var(--font-size-title);
+}
+.banner-info > p {
+    font-family: var(--font-family-titles);
+    font-size: var(--font-size-subtitle);
+}
+section {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 3em;
+}
+section > a {
+    text-decoration: none;
+}
+section h1 {
+    font-size: var(--font-size-section);
+    font-family: var(--font-family-titles);
+}
+section > p {
+    margin-top: 2em;
+    line-height: 2em;
+    font-family: var(--font-family-p);
+}
+section:nth-of-type(even) {
+    background: cornsilk;
+}
+section:nth-of-type(odd) {
+    background: black;
+}
+section:nth-of-type(even) h1 {
+    color: var(--color-section-even);
+}
+section:nth-of-type(odd) h1 {
+    color: var(--color-section-odd);
+}
+section:nth-of-type(even) p {
+    color: var(--color-section-even);
+}
+section:nth-of-type(odd) p {
+    color: var(--color-section-odd);
+}
+.arrow-up {
+    position: fixed;
+    bottom: 50px;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background:cadetblue;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.arrow-up p {
+    transform: rotate(-90deg);
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: var(--font-family-titles);
+}
+@media screen and (max-width: 768px) {
+    #navbar {
+        display: none;
+    }
+    #menu:checked ~ #navbar {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        top: 50px;
+        left: 0px;
+        margin: 0;
+        background-color: burlywood !important;
+    }
+    #menu:checked ~ #navbar li {
+        margin: 0.5em 0;
+    }
+    #menu:checked ~ #navbar a {
+        padding: 0.5em 5em 0.5em 0.5em;
+    }
+  }
+@keyframes slidein-r {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+  .animated {
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+  @-webkit-keyframes bounce {
+    0%, 100% {
+      -webkit-transform: translateY(0);
+    }
+    50% {
+      -webkit-transform: translateY(-5px);
+    }
+  }
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  .bounce {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+  }

@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background: #fdf1ec;
+    width: 100vw;
+    height: 100vh;
+}
+.img_div {
+    padding-top: 2em;
+    padding-left: 20.9%;
+    position: relative;
+    float: left;
+}
+.img {
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 2em;
+}
+.info_div {
+    background: white;
+    position: relative;
+    margin-left: 0px;
+    margin-top: 2em;
+    float: left;
+    height: 420px;
+    width: 300px;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+
+}
+.info_div_title {
+    font-family: 'Raleway', sans-serif;
+    margin-top: 1.2em;
+    margin-left: 0.5em;
+}
+.info_div_subtitle {
+    font-family: 'Raleway', sans-serif;
+    color:lightgray;
+    margin-left: 0.9em;
+}
+.info_div_info {
+    font-family: 'Playfair Display', serif;
+    color: lightgray;
+    margin-top: 1em;
+    padding: 1.2em;
+}
+.info_div_price {
+    font-family: 'Suranna', serif;
+    font-size: 2em;
+    margin-left: 0.8em;
+}
+.info_div_button {
+    font-family: 'Bentham', serif;
+    text-decoration: none;
+    text-align: center;
+    border-color: none;
+    padding: 0.3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border: 0px;
+    margin-left: 2em;
+    font-size: 1.5em;
+    border-radius: 1em;
+    background: lightskyblue;
+}
